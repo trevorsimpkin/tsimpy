@@ -1,0 +1,17 @@
+.intro-section {
+    padding-top:10%;
+}
+.intro-section  h1 {
+    color: pink;
+}
+a.page-scroll, p{
+    color: white;
+}
+.about-section, .services-section, .contact-section {
+    padding-top: 0;
+}
+.intro-section {
+    background-image: url("https://www.transparenttextures.com/patterns/maze-black.png"), linear-gradient(
+            #1DBCBD, pink
+    );
+}

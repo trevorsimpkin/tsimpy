@@ -24,11 +24,6 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-<style>
-    .intro-section {
-        padding-top:20%;
-    }
-</style>
 </head>
 
 <!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
@@ -40,8 +35,8 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h1>Trevor Simpkin</h1>
-                <p><a class="page-scroll" href="#about">About</a> / <a class="page-scroll" href="#projects">Projects</a> / <a class="page-scroll" href="#projects">Contact</a> </p>
+               <h1>Trevor Simpkin</h1>
+                <p><a class="page-scroll" href="#about">About</a> / <a class="page-scroll" href="#projects">Projects</a> / <a class="page-scroll" href="#contact">Contact</a> </p>
             </div>
         </div>
     </div>
