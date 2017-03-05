@@ -36,7 +36,7 @@
         <div class="row">
             <div class="col-lg-12">
                <h1>Trevor Simpkin</h1>
-                <p><a class="page-scroll" href="#about">About</a> / <a class="page-scroll" href="#projects">Projects</a> / <a class="page-scroll" href="#contact">Contact</a> </p>
+                <p><a class="page-scroll" href="#about">About</a> / <a class="page-scroll" href="#projects">Portfolio</a> / <a class="page-scroll" href="#contact">Contact</a> </p>
             </div>
         </div>
     </div>
@@ -47,8 +47,11 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h1>About Section</h1>
+                <h1>About</h1>
             </div>
+        </div>
+        <div class="well about-description">
+            <p>Blah blah</p>
         </div>
     </div>
 </section>
@@ -58,7 +61,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h1>Projects Section</h1>
+                <h1>Portfolio</h1>
             </div>
         </div>
     </div>
@@ -69,10 +72,86 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h1>Contact Section</h1>
+                <h1>Contact</h1>
             </div>
         </div>
+        <form class="well form-horizontal" action=" " method="post"  id="contact_form">
+            <fieldset>
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">First Name</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input  name="first_name" placeholder="First Name" class="form-control"  type="text">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text input-->
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label" >Last Name</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input name="last_name" placeholder="Last Name" class="form-control"  type="text">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">E-Mail</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                            <input name="email" placeholder="E-Mail Address" class="form-control"  type="text">
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Text input-->
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Phone #</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                            <input name="phone" placeholder="(555)555-5555" class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Text area -->
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Message</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+                            <textarea class="form-control" name="comment" placeholder="Message"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Success message
+                <div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you shortly.</div>
+                 -->
+                <!-- Button -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label"></label>
+                    <div class="col-md-4">
+                        <button type="submit" class="btn btn-info" >Send <span class="glyphicon glyphicon-send"></span></button>
+                    </div>
+                </div>
+
+            </fieldset>
+        </form>
     </div>
+    </div><!-- /.container -->
 </section>
 
 <!-- jQuery -->
