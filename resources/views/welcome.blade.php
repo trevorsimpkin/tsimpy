@@ -35,7 +35,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-               <h1>Trevor Simpkin</h1>
+               <h1>Trevor $impkin</h1>
                 <p><a class="page-scroll" href="#about">About</a> / <a class="page-scroll" href="#projects">Portfolio</a> / <a class="page-scroll" href="#contact">Contact</a> </p>
             </div>
         </div>
@@ -50,21 +50,104 @@
                 <h1>About</h1>
             </div>
         </div>
-        <div class="well about-description">
-            <p>Blah blah</p>
+        <div class="col-lg-6 about-photo">
+            <img class="img-responsive" src="http://previews.123rf.com/images/anitabonita/anitabonita1202/anitabonita120200009/12537790-smiling-old-man-holding-computer-mouse-he-is-working-on-a-desktop-Stock-Photo.jpg"/>
+        </div>
+        <div class="col-lg-6 well about-description">
+            <p>Nulla id ex incidunt voluptate occaecati. Optio porro odio sit laboriosam omnis ut voluptatum. Vero excepturi saepe incidunt delectus libero doloribus. Qui omnis iste nemo magni et recusandae ex.</p>
+            <p>Suscipit iste neque ex sequi est. Expedita et enim deleniti. Possimus perferendis quod non dolores id sed quaerat. Unde fugiat unde omnis iure cupiditate et sit.</p>
+            <p>Eum quam est nemo consequuntur sit alias libero. Est molestiae quasi itaque asperiores sunt fuga. Nulla molestiae optio ipsam officiis. Corrupti praesentium sed quas voluptas doloremque perferendis reiciendis.</p>
         </div>
     </div>
 </section>
 
-<!-- Services Section -->
+<!-- Portfolio Grid Section -->
 <section id="projects" class="services-section">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12">
                 <h1>Portfolio</h1>
             </div>
         </div>
+        <div class="container background well">
+        <!-- Projects Row -->
+        <div class="row">
+            <div class="col-md-3 col-sm-9 portfolio-item">
+                <div class="thumbnail">
+                    <a href="#">
+                        <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-9 portfolio-item">
+                <a href="#">
+                    <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-9 portfolio-item">
+                <a href="#">
+                    <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-9 portfolio-item">
+                <a href="#">
+                    <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+                </a>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Projects Row -->
+        <div class="row">
+            <div class="col-md-3 col-sm-9 portfolio-item">
+                <a href="#">
+                    <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-9 portfolio-item">
+                <a href="#">
+                    <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-9 portfolio-item">
+                <a href="#">
+                    <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-9 portfolio-item">
+                <a href="#">
+                    <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+                </a>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Projects Row -->
+        <div class="row">
+            <div class="col-md-3 col-sm-9 portfolio-item">
+                <a href="#">
+                    <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-9 portfolio-item">
+                <a href="#">
+                    <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-9 portfolio-item">
+                <a href="#">
+                    <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-9 portfolio-item">
+                <a href="#">
+                    <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+                </a>
+            </div>
+            </div>
+            </div>
     </div>
+
 </section>
 
 <!-- Contact Section -->
@@ -82,76 +165,76 @@
                     <label class="col-md-4 control-label">First Name</label>
                     <div class="col-md-4 inputGroupContainer">
                         <div class="input-group">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <!-- Text input<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>-->
                             <input  name="first_name" placeholder="First Name" class="form-control"  type="text">
                         </div>
                     </div>
                 </div>
 
-                <!-- Text input-->
 
                 <div class="form-group">
                     <label class="col-md-4 control-label" >Last Name</label>
                     <div class="col-md-4 inputGroupContainer">
                         <div class="input-group">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                            <input name="last_name" placeholder="Last Name" class="form-control"  type="text">
-                        </div>
-                    </div>
-                </div>
+                            <!-- Text input <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span> -->
+                             <input name="last_name" placeholder="Last Name" class="form-control"  type="text">
+                         </div>
+                     </div>
+                 </div>
 
-                <!-- Text input-->
+                 <!-- Text input-->
                 <div class="form-group">
                     <label class="col-md-4 control-label">E-Mail</label>
                     <div class="col-md-4 inputGroupContainer">
                         <div class="input-group">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                            <input name="email" placeholder="E-Mail Address" class="form-control"  type="text">
+                            <!-- Text input    <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>-->
+                                <input name="email" placeholder="E-Mail Address" class="form-control"  type="text">
+                            </div>
                         </div>
                     </div>
-                </div>
 
 
-                <!-- Text input-->
+                    <!-- Text input-->
 
                 <div class="form-group">
                     <label class="col-md-4 control-label">Phone #</label>
                     <div class="col-md-4 inputGroupContainer">
                         <div class="input-group">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-                            <input name="phone" placeholder="(555)555-5555" class="form-control" type="text">
-                        </div>
-                    </div>
-                </div>
+                            <!-- Text input
+                               <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span> -->
+                               <input name="phone" placeholder="(555)555-5555" class="form-control" type="text">
+                           </div>
+                       </div>
+                   </div>
 
 
-                <!-- Text area -->
+                   <!-- Text area -->
 
                 <div class="form-group">
                     <label class="col-md-4 control-label">Message</label>
                     <div class="col-md-4 inputGroupContainer">
                         <div class="input-group">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-                            <textarea class="form-control" name="comment" placeholder="Message"></textarea>
-                        </div>
-                    </div>
-                </div>
+                            <!-- Text input  <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>-->
+                              <textarea class="form-control" name="comment" placeholder="Message"></textarea>
+                          </div>
+                      </div>
+                  </div>
 
-                <!-- Success message
-                <div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you shortly.</div>
-                 -->
+                  <!-- Success message
+                  <div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you shortly.</div>
+                   -->
                 <!-- Button -->
                 <div class="form-group">
                     <label class="col-md-4 control-label"></label>
                     <div class="col-md-4">
                         <button type="submit" class="btn btn-info" >Send <span class="glyphicon glyphicon-send"></span></button>
-                    </div>
-                </div>
+                     </div>
+                 </div>
 
-            </fieldset>
-        </form>
-    </div>
-    </div><!-- /.container -->
+             </fieldset>
+         </form>
+     </div>
+     </div><!-- /.container -->
 </section>
 
 <!-- jQuery -->

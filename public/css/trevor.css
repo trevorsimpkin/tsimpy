@@ -20,7 +20,20 @@ a.page-scroll, p{
 }
 .about-description p {
     color: black;
+    text-align: justify;
 }
 .services-section {
-    color: pink;
+    color: #ffc0cb;
+}
+.services-section h1 {
+    margin-bottom: 50px;
+}
+.services-section .background {
+    background-image: url("https://www.transparenttextures.com/patterns/maze-black.png"), linear-gradient(
+            #1DBCBD, pink
+    );
+    padding: 20px;
+}
+.portfolio-item {
+    margin-bottom: 25px;
 }
