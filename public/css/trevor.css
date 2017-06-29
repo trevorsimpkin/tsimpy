@@ -29,8 +29,7 @@ a.page-scroll, p{
     margin-bottom: 50px;
 }
 .services-section .background {
-    background-image: url("https://www.transparenttextures.com/patterns/maze-black.png"), linear-gradient(
-            #1DBCBD, pink
+    background: #eee;
     );
     padding: 20px;
 }
