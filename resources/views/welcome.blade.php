@@ -74,28 +74,28 @@
         <div class="row">
             <div class="col-md-3 col-sm-9 portfolio-item">
                 <div class="thumbnail">
-                    <a href="#">
+                    <a href="/projects/gameoflife">
                         <img class="img-responsive" src="thumbnail1.png" alt="">
                     </a>
                 </div>
             </div>
             <div class="col-md-3 col-sm-9 portfolio-item">
                 <div class="thumbnail">
-                    <a href="#">
+                    <a href="/projects/nqueens">
                         <img class="img-responsive" src="thumbnail6.png" alt="">
                     </a>
                 </div>
             </div>
             <div class="col-md-3 col-sm-9 portfolio-item">
                 <div class="thumbnail">
-                    <a href="#">
+                    <a href="/projects/dwa">
                         <img class="img-responsive" src="thumbnail3.png" alt="">
                     </a>
                 </div>
             </div>
             <div class="col-md-3 col-sm-9 portfolio-item">
                 <div class="thumbnail">
-                    <a href="#">
+                    <a href="/projects/ugresearch">
                         <img class="img-responsive" src="thumbnail4.png" alt="">
                     </a>
                 </div>
@@ -107,28 +107,28 @@
         <div class="row">
             <div class="col-md-3 col-sm-9 portfolio-item">
                 <div class="thumbnail">
-                    <a href="#">
+                    <a href="/projects/kwd">
                         <img class="img-responsive" src="thumbnail5.png" alt="">
                     </a>
                 </div>
             </div>
             <div class="col-md-3 col-sm-9 portfolio-item">
                 <div class="thumbnail">
-                    <a href="#">
+                    <a href="/projects/cityrocks">
                         <img class="img-responsive" src="thumbnail6.png" alt="">
                     </a>
                 </div>
             </div>
             <div class="col-md-3 col-sm-9 portfolio-item">
                 <div class="thumbnail">
-                    <a href="#">
+                    <a href="/projects/pca">
                         <img class="img-responsive" src="thumbnail1.png" alt="">
                     </a>
                 </div>
             </div>
             <div class="col-md-3 col-sm-9 portfolio-item">
                 <div class="thumbnail">
-                    <a href="#">
+                    <a href="/projects/pcp">
                         <img class="img-responsive" src="thumbnail1.png" alt="">
                     </a>
                 </div>
@@ -140,15 +140,15 @@
         <div class="row">
             <div class="col-md-3 col-sm-9 portfolio-item">
                 <div class="thumbnail">
-                    <a href="#">
-                        <img class="img-responsive" src="thumbnail1.png" alt="">
+                    <a href="https://www.github.com">
+                        <img class="img-responsive" src="thumbnail10.png" alt="">
                     </a>
                 </div>
             </div>
             <div class="col-md-3 col-sm-9 portfolio-item">
                 <div class="thumbnail">
-                    <a href="#">
-                        <img class="img-responsive" src="thumbnail10.png" alt="">
+                    <a href="https://www.linkedin.com">
+                        <img class="img-responsive" src="thumbnail1.png" alt="">
                     </a>
                 </div>
             </div>

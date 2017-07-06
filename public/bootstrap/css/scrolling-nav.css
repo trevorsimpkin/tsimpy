@@ -37,12 +37,22 @@ of those sections to manage the look and feel of the site. */
     text-align: center;
     background: #fff;
 }
+@media screen and (max-width: 1050px) {
+    .about-section {
+        height: auto;
+        padding-top: 150px;
+        text-align: center;
+        background: #eee;
+    }
+}
 
-.about-section {
-    height: auto;
-    padding-top: 150px;
-    text-align: center;
-    background: #eee;
+@media screen and (min-width: 1050px) {
+    .about-section {
+        height: 100%;
+        padding-top: 150px;
+        text-align: center;
+        background: #eee;
+    }
 }
 
 .services-section {

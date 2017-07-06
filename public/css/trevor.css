@@ -1,3 +1,7 @@
+body {
+    font-family: monospace;
+}
+
 .intro-section {
     padding-top:15%;
 }
