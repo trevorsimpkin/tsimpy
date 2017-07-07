@@ -55,8 +55,6 @@
                         </li>
                         <li><a href="/projects/cityrocks">City Rocks</a>
                         </li>
-                        <li><a href="/projects/pcp">Online Game</a>
-                        </li>
                         <li><a href="/projects/pca">PCA Site</a>
                         </li>
                     </ul>

@@ -32,9 +32,6 @@ Route::get('/projects/kwd', function () {
 Route::get('/projects/cityrocks', function () {
     return view('projects.cityrocks');
 });
-Route::get('/projects/pcp', function () {
-    return view('projects.pcp');
-});
 Route::get('/projects/pca', function () {
     return view('projects.pca');
 });

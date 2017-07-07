@@ -54,9 +54,9 @@
             <img class="img-responsive" src="http://previews.123rf.com/images/anitabonita/anitabonita1202/anitabonita120200009/12537790-smiling-old-man-holding-computer-mouse-he-is-working-on-a-desktop-Stock-Photo.jpg"/>
         </div>
         <div class="col-lg-6 well about-description">
-            <p>Nulla id ex incidunt voluptate occaecati. Optio porro odio sit laboriosam omnis ut voluptatum. Vero excepturi saepe incidunt delectus libero doloribus. Qui omnis iste nemo magni et recusandae ex.</p>
-            <p>Suscipit iste neque ex sequi est. Expedita et enim deleniti. Possimus perferendis quod non dolores id sed quaerat. Unde fugiat unde omnis iure cupiditate et sit.</p>
-            <p>Eum quam est nemo consequuntur sit alias libero. Est molestiae quasi itaque asperiores sunt fuga. Nulla molestiae optio ipsam officiis. Corrupti praesentium sed quas voluptas doloremque perferendis reiciendis.</p>
+            <p>Thanks for visiting my site! I am originally from the Seattle area but currently live in Brooklyn, NY. I have a diverse academic background that includes a bachelor's in Physics, a ton of computer science work, and will be obtaining my Master's in Information Systems from Brooklyn College in December 2017!</p>
+            <p>I love programming, web development, and rock climbing!</p>
+            <p>Some personal, academic, and professional projects can be found below! Also, feel free to contact me using the form at the bottom of the page. Enjoy! </p>
         </div>
     </div>
 </section>
@@ -82,7 +82,7 @@
             <div class="col-md-3 col-sm-9 portfolio-item">
                 <div class="thumbnail">
                     <a href="/projects/nqueens">
-                        <img class="img-responsive" src="thumbnail6.png" alt="">
+                        <img class="img-responsive" src="thumbnail2.png" alt="">
                     </a>
                 </div>
             </div>
@@ -95,16 +95,24 @@
             </div>
             <div class="col-md-3 col-sm-9 portfolio-item">
                 <div class="thumbnail">
-                    <a href="/projects/ugresearch">
-                        <img class="img-responsive" src="thumbnail4.png" alt="">
+                    <a href="/projects/pca">
+                        <img class="img-responsive" src="thumbnail7.png" alt="">
                     </a>
                 </div>
             </div>
+
         </div>
         <!-- /.row -->
 
         <!-- Projects Row -->
         <div class="row">
+            <div class="col-md-3 col-sm-9 portfolio-item">
+                <div class="thumbnail">
+                    <a href="/projects/ugresearch">
+                        <img class="img-responsive" src="thumbnail4.png" alt="">
+                    </a>
+                </div>
+            </div>
             <div class="col-md-3 col-sm-9 portfolio-item">
                 <div class="thumbnail">
                     <a href="/projects/kwd">
@@ -119,17 +127,11 @@
                     </a>
                 </div>
             </div>
+
             <div class="col-md-3 col-sm-9 portfolio-item">
                 <div class="thumbnail">
-                    <a href="/projects/pca">
-                        <img class="img-responsive" src="thumbnail1.png" alt="">
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-9 portfolio-item">
-                <div class="thumbnail">
-                    <a href="/projects/pcp">
-                        <img class="img-responsive" src="thumbnail1.png" alt="">
+                    <a href="https://github.com/trevorsimpkin">
+                        <img class="img-responsive" src="thumbnail10.png" alt="">
                     </a>
                 </div>
             </div>
@@ -140,15 +142,8 @@
         <div class="row">
             <div class="col-md-3 col-sm-9 portfolio-item">
                 <div class="thumbnail">
-                    <a href="https://www.github.com">
-                        <img class="img-responsive" src="thumbnail10.png" alt="">
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-9 portfolio-item">
-                <div class="thumbnail">
-                    <a href="https://www.linkedin.com">
-                        <img class="img-responsive" src="thumbnail1.png" alt="">
+                    <a href="https://www.linkedin.com/in/trevor-simpkin-a284aa64/">
+                        <img class="img-responsive" src="thumbnail8.png" alt="">
                     </a>
                 </div>
             </div>

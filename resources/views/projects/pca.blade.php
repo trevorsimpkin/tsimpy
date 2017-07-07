@@ -1,6 +1,6 @@
 @extends('layouts.project')
 @section('title')
-    <title>Trevor Simpkin - Kelvin Water Dropper</title>
+    <title>Trevor Simpkin - PCA website</title>
 @stop
 @section('content')
     <div class="col-lg-8">
@@ -8,23 +8,19 @@
         <!-- Blog Post -->
 
         <!-- Title -->
-        <h1>Kelvin Water Dropper</h1>
+        <h1>PCA Website</h1>
 
         <!-- Author -->
-        <hr>
 
         <!-- Date/Time -->
-        <img class="img-responsive" src="http://placehold.it/900x300" alt="">
+        <img class="img-responsive" src="/pcaprojectpic.png" alt="">
 
         <hr>
 
         <!-- Post Content -->
-        <p class="lead">During an independent study class at Seattle U, I built a Kelvin Water Droper (KWD) to use for instruction in undergraduate electricity and magnetism courses. </p>
-        <p>After an attempt to build a KWD in an advanced physics lab, Professor Andy Kim agreed to supervise an independent study project. Using materials from the local hardware store and a few spheres machined by the SU Engineering Department, I was able to construct a working KWD that is still used today for demonstrations.</p>
-        <p>To learn more about the Kelvin Water Dropper visit <a href="">Website</a>.</p>
-        <p></p>
-
-        <!-- Posted Comments -->
+        <p class="lead">Currently in the process of designing a new company website for my current employer. Using Laravel as a framework, I was able to design an easy to use site that satisfied the requirement that a user could add content without any web design experience.</p>
+        <p>The current company website uses flash and its content had not been updated in some time. I was asked to create a simple, professional site that would be mobile-friendly and easy to update. I delivered the product on time and my employer was happy with the result. </p>
+        <p>The site should be up soon, once all content is created and added.</p>
     </div>
 
     <!-- Blog Sidebar Widgets Column -->
@@ -49,11 +45,10 @@
                 </div>
                 <div class="col-lg-6">
                     <ul class="list-unstyled">
-                        <li>KWD
+                        <li><a href="/projects/kwd">KWD</a>
                         </li>
-                        <li><a href="/projects/cityrocks">City Rocks</a>
-                        </li>
-                        <li><a href="/projects/pca">PCA Site</a>
+                        <li><a href="/projects/cityrocks">City Rocks</a></li>
+                        <li>PCA Site</a>
                         </li>
                     </ul>
                 </div>
