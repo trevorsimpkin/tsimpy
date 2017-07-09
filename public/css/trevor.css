@@ -40,3 +40,13 @@ a.page-scroll, p{
 .portfolio-item {
     margin-bottom: 25px;
 }
+.message {
+    width:100%;
+    text-align:center;
+    padding:5px;
+    position:fixed;
+    top:0;
+    left:0;
+    background-color: #228000;
+    font-weight:bold;
+}

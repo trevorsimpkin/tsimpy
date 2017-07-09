@@ -54,9 +54,10 @@
             <img class="img-responsive" src="http://previews.123rf.com/images/anitabonita/anitabonita1202/anitabonita120200009/12537790-smiling-old-man-holding-computer-mouse-he-is-working-on-a-desktop-Stock-Photo.jpg"/>
         </div>
         <div class="col-lg-6 well about-description">
-            <p>Thanks for visiting my site! I am originally from the Seattle area but currently live in Brooklyn, NY. I have a diverse academic background that includes a bachelor's in Physics, a ton of computer science work, and will be obtaining my Master's in Information Systems from Brooklyn College in December 2017!</p>
+            <p>Thanks for visiting my site! I am originally from the Seattle area but currently live in Brooklyn, NY. I have a diverse academic background that includes a BS in Physics, a ton of computer science work, and will be obtaining my MS in Information Systems from Brooklyn College in December 2017!</p>
             <p>I love programming, web development, and rock climbing!</p>
             <p>Some personal, academic, and professional projects can be found below! Also, feel free to contact me using the form at the bottom of the page. Enjoy! </p>
+            <p>-Trevor Simpkin</p>
         </div>
     </div>
 </section>
@@ -162,7 +163,16 @@
                 <h1>Contact</h1>
             </div>
         </div>
-        <form class="well form-horizontal" action=" " method="post"  id="contact_form">
+        @if(Session::get('message') != null)
+            <div class='message'><i class="glyphicon glyphicon-thumbs-up"></i>{{ Session::get('message') }}</div>
+        @endif
+        <ul>
+            @foreach($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+        <form method='POST' action='#contact' class="well form-horizontal" id="contact_form">
+            {!! csrf_field() !!}
             <fieldset>
 
                 <div class="form-group">
@@ -170,7 +180,7 @@
                     <div class="col-md-4 inputGroupContainer">
                         <div class="input-group">
                             <!-- Text input<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>-->
-                            <input  name="first_name" placeholder="First Name" class="form-control"  type="text">
+                            <input  name="first_name" id="first_name" placeholder="First Name" class="form-control"  type="text">
                         </div>
                     </div>
                 </div>
@@ -181,7 +191,7 @@
                     <div class="col-md-4 inputGroupContainer">
                         <div class="input-group">
                             <!-- Text input <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span> -->
-                             <input name="last_name" placeholder="Last Name" class="form-control"  type="text">
+                             <input name="last_name" id ="last_name" placeholder="Last Name" class="form-control"  type="text">
                          </div>
                      </div>
                  </div>
@@ -192,7 +202,7 @@
                     <div class="col-md-4 inputGroupContainer">
                         <div class="input-group">
                             <!-- Text input    <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>-->
-                                <input name="email" placeholder="E-Mail Address" class="form-control"  type="text">
+                                <input name="email" id="email" placeholder="E-Mail Address" class="form-control"  type="text">
                             </div>
                         </div>
                     </div>
@@ -206,7 +216,7 @@
                         <div class="input-group">
                             <!-- Text input
                                <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span> -->
-                               <input name="phone" placeholder="(555)555-5555" class="form-control" type="text">
+                               <input name="phone" id="phone" placeholder="(555)555-5555" class="form-control" type="text">
                            </div>
                        </div>
                    </div>
@@ -219,7 +229,7 @@
                     <div class="col-md-4 inputGroupContainer">
                         <div class="input-group">
                             <!-- Text input  <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>-->
-                              <textarea class="form-control" name="comment" placeholder="Message"></textarea>
+                              <textarea class="form-control" name="message" id="message" placeholder="Message"></textarea>
                           </div>
                       </div>
                   </div>
