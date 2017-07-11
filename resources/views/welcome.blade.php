@@ -51,11 +51,11 @@
             </div>
         </div>
         <div class="col-lg-6 about-photo">
-            <img class="img-responsive" src="http://previews.123rf.com/images/anitabonita/anitabonita1202/anitabonita120200009/12537790-smiling-old-man-holding-computer-mouse-he-is-working-on-a-desktop-Stock-Photo.jpg"/>
+            <img class="img-responsive" src="/trevorabout.png" width="400"/>
         </div>
         <div class="col-lg-6 well about-description">
-            <p>Thanks for visiting my site! I am originally from the Seattle area, currently living in Brooklyn, NY. I have a diverse academic background that includes a BS in Physics, a ton of computer science work, and will be obtaining my MS in Information Systems from Brooklyn College in December 2017.</p>
-            <p>I love programming, web development, and rock climbing!</p>
+            <p>Thanks for visiting my site! I am currently living in Brooklyn, NY, originally from the Seattle area. I have a diverse academic background that includes a BS in Physics, a ton of computer science coursework, and will be obtaining my MS in Information Systems from Brooklyn College in December 2017.</p>
+            <p>I love building things and solving problems.  My interests are programming, web development, systems analysis and design, and rock climbing.</p>
             <p>Some personal, academic, and professional projects can be found below! Also, feel free to contact me using the form at the bottom of the page.</p>
             <p>-Trevor Simpkin</p>
         </div>

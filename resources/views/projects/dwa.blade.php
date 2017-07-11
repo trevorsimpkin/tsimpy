@@ -14,7 +14,7 @@
         <hr>
 
         <!-- Date/Time -->
-        <img class="img-responsive" src="http://placehold.it/900x300" alt="">
+        <img class="img-responsive" src="/harvardportfolio.png" width="800" alt="Harvard Portfolio">
 
         <hr>
 
