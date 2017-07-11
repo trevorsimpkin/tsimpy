@@ -15,12 +15,14 @@ class MailController extends Controller
                 'last_name' => 'required',
                 'email' => 'required',
                 'message' => 'required'
+                //, 'phone => 'required'
             ]
         );
         \Mail::send('emails.contact', array(
             'first_name' => $request->get('first_name'),
             'last_name' => $request->get('last_name'),
             'email' => $request->get('email'),
+            'phone' => $request->get('phone'),
             'user_message' => $request->get('message')
         ), function($message)
         {

@@ -54,9 +54,9 @@
             <img class="img-responsive" src="http://previews.123rf.com/images/anitabonita/anitabonita1202/anitabonita120200009/12537790-smiling-old-man-holding-computer-mouse-he-is-working-on-a-desktop-Stock-Photo.jpg"/>
         </div>
         <div class="col-lg-6 well about-description">
-            <p>Thanks for visiting my site! I am originally from the Seattle area but currently live in Brooklyn, NY. I have a diverse academic background that includes a BS in Physics, a ton of computer science work, and will be obtaining my MS in Information Systems from Brooklyn College in December 2017!</p>
+            <p>Thanks for visiting my site! I am originally from the Seattle area, currently living in Brooklyn, NY. I have a diverse academic background that includes a BS in Physics, a ton of computer science work, and will be obtaining my MS in Information Systems from Brooklyn College in December 2017.</p>
             <p>I love programming, web development, and rock climbing!</p>
-            <p>Some personal, academic, and professional projects can be found below! Also, feel free to contact me using the form at the bottom of the page. Enjoy! </p>
+            <p>Some personal, academic, and professional projects can be found below! Also, feel free to contact me using the form at the bottom of the page.</p>
             <p>-Trevor Simpkin</p>
         </div>
     </div>
