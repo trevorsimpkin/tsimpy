@@ -15,7 +15,7 @@
     <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="/bootstrap/css/blog-post.css" rel="stylesheet">
+    <link href="/bootstrap/css/project.css" rel="stylesheet">
 
 
 

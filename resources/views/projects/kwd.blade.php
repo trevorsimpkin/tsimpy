@@ -5,33 +5,22 @@
 @section('content')
     <div class="col-lg-8">
 
-        <!-- Blog Post -->
-
-        <!-- Title -->
         <h1>Kelvin Water Dropper</h1>
 
-        <!-- Author -->
         <hr>
 
-        <!-- Date/Time -->
-        <img class="img-responsive kwdgif" src="/kwdgifcrop.gif" width="900" alt="Kelvin Water Dropper">
+        <img class="img-responsive kwdgif" src="/images/kwdgifcrop.gif" width="900" alt="Kelvin Water Dropper">
 
         <hr>
 
-        <!-- Post Content -->
         <p class="lead">During an independent study class at Seattle U, I built a Kelvin Water Droper (KWD) to use for instruction in undergraduate electricity and magnetism courses. </p>
         <p>After an attempt to build a KWD in an advanced physics lab, Professor Andy Kim agreed to supervise an independent study project. Using materials from the local hardware store and a few spheres machined by the SU Engineering Department, I was able to construct a working KWD that is still used today for demonstrations.</p>
-        <p>To learn more about the Kelvin Water Dropper visit <a href="">Website</a>.</p>
+        <p>To learn more about the Kelvin Water Dropper visit <a href=https://en.wikipedia.org/wiki/Kelvin_water_dropper>Kelvin Water Dropper</a>.</p>
         <p></p>
 
-        <!-- Posted Comments -->
     </div>
 
-    <!-- Blog Sidebar Widgets Column -->
     <div class="col-md-4">
-
-
-        <!-- Blog Categories Well -->
         <div class="well">
             <h4>Other Projects</h4>
             <div class="row">

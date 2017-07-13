@@ -13,7 +13,7 @@
         <!-- Author -->
 
         <!-- Date/Time -->
-        <img class="img-responsive" src="/pcaprojectpic.png" alt="">
+        <img class="img-responsive" src="/images/pcaprojectpic.png" alt="">
 
         <hr>
 

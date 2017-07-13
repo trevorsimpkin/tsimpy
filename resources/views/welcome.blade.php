@@ -13,11 +13,11 @@
     <title>Trevor Simpkin</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="bootstrap/css/scrolling-nav.css" rel="stylesheet">
-    <link href="css/trevor.css" rel="stylesheet">
+    <link href="/bootstrap/css/scrolling-nav.css" rel="stylesheet">
+    <link href="/css/trevor.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -51,10 +51,10 @@
             </div>
         </div>
         <div class="col-lg-6 about-photo">
-            <img class="img-responsive" src="/trevorabout.png" width="400"/>
+            <img class="img-responsive" src="/images/trevorabout.png" width="400"/>
         </div>
         <div class="col-lg-6 well about-description">
-            <p>Thanks for visiting my site! I am currently living in Brooklyn, NY, originally from the Seattle area. I have a diverse academic background that includes a BS in Physics, a ton of computer science coursework, and will be obtaining my MS in Information Systems from Brooklyn College in December 2017.</p>
+            <p>Thanks for visiting my site! I am originally from the Seattle area, currently living in Brooklyn, NY. I have a diverse academic background that includes a BS in Physics, a ton of computer science coursework, and will be obtaining my MS in Information Systems from Brooklyn College in December 2017.</p>
             <p>I love building things and solving problems.  My interests are programming, web development, systems analysis and design, and rock climbing.</p>
             <p>Some personal, academic, and professional projects can be found below! Also, feel free to contact me using the form at the bottom of the page.</p>
             <p>-Trevor Simpkin</p>
@@ -76,28 +76,28 @@
             <div class="col-md-3 col-sm-9 portfolio-item">
                 <div class="thumbnail">
                     <a href="/projects/gameoflife">
-                        <img class="img-responsive" src="thumbnail1.png" alt="">
+                        <img class="img-responsive" src="/images/thumbnail1.png" alt="">
                     </a>
                 </div>
             </div>
             <div class="col-md-3 col-sm-9 portfolio-item">
                 <div class="thumbnail">
                     <a href="/projects/nqueens">
-                        <img class="img-responsive" src="thumbnail2.png" alt="">
+                        <img class="img-responsive" src="/images/thumbnail2.png" alt="">
                     </a>
                 </div>
             </div>
             <div class="col-md-3 col-sm-9 portfolio-item">
                 <div class="thumbnail">
                     <a href="/projects/dwa">
-                        <img class="img-responsive" src="thumbnail3.png" alt="">
+                        <img class="img-responsive" src="/images/thumbnail3.png" alt="">
                     </a>
                 </div>
             </div>
             <div class="col-md-3 col-sm-9 portfolio-item">
                 <div class="thumbnail">
                     <a href="/projects/pca">
-                        <img class="img-responsive" src="thumbnail7.png" alt="">
+                        <img class="img-responsive" src="/images/thumbnail7.png" alt="">
                     </a>
                 </div>
             </div>
@@ -110,21 +110,21 @@
             <div class="col-md-3 col-sm-9 portfolio-item">
                 <div class="thumbnail">
                     <a href="/projects/ugresearch">
-                        <img class="img-responsive" src="thumbnail4.png" alt="">
+                        <img class="img-responsive" src="/images/thumbnail4.png" alt="">
                     </a>
                 </div>
             </div>
             <div class="col-md-3 col-sm-9 portfolio-item">
                 <div class="thumbnail">
                     <a href="/projects/kwd">
-                        <img class="img-responsive" src="thumbnail5.png" alt="">
+                        <img class="img-responsive" src="/images/thumbnail5.png" alt="">
                     </a>
                 </div>
             </div>
             <div class="col-md-3 col-sm-9 portfolio-item">
                 <div class="thumbnail">
                     <a href="/projects/cityrocks">
-                        <img class="img-responsive" src="thumbnail6.png" alt="">
+                        <img class="img-responsive" src="/images/thumbnail6.png" alt="">
                     </a>
                 </div>
             </div>
@@ -132,7 +132,7 @@
             <div class="col-md-3 col-sm-9 portfolio-item">
                 <div class="thumbnail">
                     <a href="https://github.com/trevorsimpkin">
-                        <img class="img-responsive" src="thumbnail10.png" alt="">
+                        <img class="img-responsive" src="/images/thumbnail10.png" alt="">
                     </a>
                 </div>
             </div>
@@ -144,7 +144,7 @@
             <div class="col-md-3 col-sm-9 portfolio-item">
                 <div class="thumbnail">
                     <a href="https://www.linkedin.com/in/trevor-simpkin-a284aa64/">
-                        <img class="img-responsive" src="thumbnail8.png" alt="">
+                        <img class="img-responsive" src="/images/thumbnail8.png" alt="">
                     </a>
                 </div>
             </div>
@@ -179,7 +179,6 @@
                     <label class="col-md-4 control-label">First Name</label>
                     <div class="col-md-4 inputGroupContainer">
                         <div class="input-group">
-                            <!-- Text input<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>-->
                             <input  name="first_name" id="first_name" placeholder="First Name" class="form-control"  type="text">
                         </div>
                     </div>
@@ -190,7 +189,6 @@
                     <label class="col-md-4 control-label" >Last Name</label>
                     <div class="col-md-4 inputGroupContainer">
                         <div class="input-group">
-                            <!-- Text input <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span> -->
                              <input name="last_name" id ="last_name" placeholder="Last Name" class="form-control"  type="text">
                          </div>
                      </div>
@@ -201,7 +199,6 @@
                     <label class="col-md-4 control-label">E-Mail</label>
                     <div class="col-md-4 inputGroupContainer">
                         <div class="input-group">
-                            <!-- Text input    <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>-->
                                 <input name="email" id="email" placeholder="E-Mail Address" class="form-control"  type="text">
                             </div>
                         </div>
@@ -228,16 +225,11 @@
                     <label class="col-md-4 control-label">Message</label>
                     <div class="col-md-4 inputGroupContainer">
                         <div class="input-group">
-                            <!-- Text input  <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>-->
                               <textarea class="form-control" name="message" id="message" placeholder="Message"></textarea>
                           </div>
                       </div>
                   </div>
 
-                  <!-- Success message
-                  <div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you shortly.</div>
-                   -->
-                <!-- Button -->
                 <div class="form-group">
                     <label class="col-md-4 control-label"></label>
                     <div class="col-md-4">
