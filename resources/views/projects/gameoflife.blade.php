@@ -17,7 +17,7 @@
         <p>We discussed the importance of cellular automata (CA) and looked at a few examples, but after the course I wanted to develop my own. I had not done much GUI or game programming but had some experience with the Java Swing package. After a little research I decided to develop a simple one dimensional CA in JavaFX2. Source code can be found  <a href="#">here</a>.</p>
         <p>While developing the one dimensional CA, I realized JavaFX2 was not the best package for almost any task (haha) and became interested in web game development and found Phaser to be a good framework to use. Conway's Game of Life seemed like a natural first project for Phaser.  </p>
         <p>I would like to implement a few improvements in future generations of my Game of Life app. First, I would like to try out a different algorithm for evaluating the state of neighboring squares. While my current version is working fine, it is not the most efficient way to evaluate the future state of each square. As of now, each frame iterates through each grid square and counts the the number of on neighbors to determine the state for the next frame. There are more advanced methods for evaluating neighbors that avoid evaluating squares that have no chance of changing states, and utilize neighbor counts from other squares to avoid repetition. </p>
-        <p>The link to my current version of Game of Life can be found <a href="gameoflife.trevorsimpkin.com">here</a>. The source code is <a href="https://github.com/trevorsimpkin/GameOfLife">here</a>.</p>
+        <p>The link to my current version of Game of Life can be found <a href="http://gameoflife.trevorsimpkin.com/">here</a>. The source code is <a href="https://github.com/trevorsimpkin/GameOfLife">here</a>.</p>
 
 
     </div>
