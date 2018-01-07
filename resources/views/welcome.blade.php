@@ -54,7 +54,7 @@
             <img class="img-responsive" src="/images/trevorabout.png" width="400"/>
         </div>
         <div class="col-lg-6 well about-description">
-            <p>Thanks for visiting my site! I am originally from the Seattle area, currently living in Brooklyn, NY. I have a diverse academic background that includes a BS in Physics, a ton of computer science coursework, and will be obtaining my MS in Information Systems from Brooklyn College in December 2017.</p>
+            <p>Thanks for visiting my site! I am originally from the Seattle area, currently living in Brooklyn, NY. I have a diverse academic background that includes a BS in Physics, a ton of computer science coursework, and have recently obtained my MS in Information Systems from Brooklyn College.</p>
             <p>I love building things and solving problems.  My interests are programming, web development, systems analysis and design, and rock climbing.</p>
             <p>Some personal, academic, and professional projects can be found below! Also, feel free to contact me using the form at the bottom of the page.</p>
             <p>-Trevor Simpkin</p>

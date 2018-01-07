@@ -15,7 +15,7 @@ a.page-scroll, p{
     padding-top: 0;
 }
 .intro-section {
-    background-image: url("https://www.transparenttextures.com/patterns/maze-black.png"), linear-gradient(
+    background-image: url("/images/maze-black.png"), linear-gradient(
             #1DBCBD, pink
     );
 }
