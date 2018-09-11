@@ -37,3 +37,6 @@ Route::get('/projects/cityrocks', function () {
 Route::get('/projects/pca', function () {
     return view('projects.pca');
 });
+Route::get('/projects/test', function () {
+    return view('projects.test');
+});
