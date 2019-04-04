@@ -302,11 +302,11 @@ gameOver = true;
                             <i class="fas fa-plus fa-3x"></i>
                         </div>
                     </div>
-                    <img class="img-fluid" src="/images/thumbnail1.png" alt="">
+                    <img class="img-fluid" src="/images/graph_screenshot.png" alt="">
                 </a>
                 <div class="portfolio-caption">
-                    <h4>Noise Level Monitoring Site</h4>
-                    <p class="text-muted">Data Presentation</p>
+                    <h4>Project Management / Data App</h4>
+                    <p class="text-muted">Web Development / Data Presentation</p>
                 </div>
             </div>
             <div class="col-md-4 col-sm-6 portfolio-item">
@@ -316,10 +316,10 @@ gameOver = true;
                             <i class="fas fa-plus fa-3x"></i>
                         </div>
                     </div>
-                    <img class="img-fluid" src="/images/thumbnail1.png" alt="">
+                    <img class="img-fluid" src="/images/pcairnoisetraffic_screenshot.png" alt="">
                 </a>
                 <div class="portfolio-caption">
-                    <h4>Company Web Page</h4>
+                    <h4>Company Site</h4>
                     <p class="text-muted">Web Development</p>
                 </div>
             </div>
