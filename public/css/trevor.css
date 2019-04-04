@@ -5,26 +5,78 @@ body {
 .intro-section {
     padding-top:15%;
 }
+@keyframes flashing {
+    0%   {color:#eb435e;}
+    33%  {color:#eb8d40;}
+    66%  {color:#f07bf4;}
+    100% {color:#eb435e;}
+}
 .intro-section  h1 {
-    color: pink;
+    font-family: 'Press Start 2P', cursive;
+    color: #fee9a6;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    text-align: center;
+}
+
+.flashing-text{
+    -webkit-animation: flashing 250ms infinite; /* Safari 4.0 - 8.0 */
+    animation: flashing 250ms infinite;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.nav-list {
+    list-style-type: none;
+    text-align: left;
+    font-family: 'Press Start 2P', cursive;
+    text-shadow: -1px 0 darkblue, 0 1px darkblue, 1px 0 darkblue, 0 -1px darkblue;
+    padding-top: 50px
 }
 a.page-scroll, p{
     color: white;
+}
+a:hover {
+    text-decoration: none;
+}
+li:hover {
+    list-style-image: url("/images/right-arrow.png");
 }
 .about-section, .services-section, .contact-section {
     padding-top: 0;
 }
 .intro-section {
-    background-image: url("/images/maze-black.png"), linear-gradient(
-            #1DBCBD, pink
-    );
+    background: #3dd3fd;
 }
 .about-section h1, .contact-section h1{
-    color: #1DBCBD;
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    text-shadow: -1px 0 blue, 0 1px blue, 1px 0 blue, 0 -1px blue;
+}
+
+.about-section {
+    background-color: black;
+}
+@media screen and (min-width: 330px) {
+    .about-section {
+        height: 100%;
+    }
+}
+.heading {
+    padding-top: 20px;
+    height: 150px;
+}
+.about-description {
+    padding-top: 0;
 }
 .about-description p {
-    color: black;
-    text-align: justify;
+    color: white;
+    font-family: monospace;
+    text-align: center;
+    font-size: 18px;
+}
+.banner {
+    max-width: 100%;
+}
+.text {
+    max-width:1250px;
 }
 .services-section {
     color: #ffc0cb;

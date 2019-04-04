@@ -54,9 +54,13 @@ of those sections to manage the look and feel of the site. */
         background: #eee;
     }
 }
+@media screen and (min-width: 768px) {
+    .services-section {
+        height: 100%;
+    }
+}
 
 .services-section {
-    height: auto;
     padding-top: 150px;
     padding-bottom: 20px;
     text-align: center;

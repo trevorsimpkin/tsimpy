@@ -12,6 +12,7 @@
 
         gtag('config', 'UA-112387224-1');
     </script>
+    <script src="//cdn.jsdelivr.net/npm/phaser@3.11.0/dist/phaser.js"></script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,6 +27,8 @@
     <!-- Custom CSS -->
     <link href="/bootstrap/css/scrolling-nav.css" rel="stylesheet">
     <link href="/css/trevor.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -37,14 +40,226 @@
 <!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<script type="text/javascript">
+
+var config = {
+type: Phaser.AUTO,
+width: 1200,
+height: 300,
+parent: 'game',
+physics: {
+default: 'arcade',
+arcade: {
+gravity: { y: 300 },
+debug: false
+}
+},
+scene: {
+preload: preload,
+create: create,
+update: update
+}
+};
+
+var player;
+var stars;
+var bombs;
+var platforms;
+var cursors;
+var score = 0;
+var gameOver = false;
+var scoreText;
+
+var game = new Phaser.Game(config);
+
+function preload ()
+{
+this.load.image('sky', 'assets/sky.png');
+this.load.image('ground', 'assets/platform.png');
+this.load.image('star', 'assets/door.png');
+//this.load.image('bomb', 'assets/bomb.png');
+this.load.spritesheet('dude', 'assets/dude.png', { frameWidth: 32, frameHeight: 48 });
+}
+
+function create ()
+{
+//  A simple background for our game
+this.add.image(1200, 300, 'sky');
+
+//  The platforms group contains the ground and the 2 ledges we can jump on
+platforms = this.physics.add.staticGroup();
+
+//  Here we create the ground.
+//  Scale it to fit the width of the game (the original sprite is 400x32 in size)
+platforms.create(600, 345, 'ground').setScale(3).refreshBody();
+
+//  Now let's create some ledges
+//platforms.create(400, 100, 'ground');
+
+// The player and its settings
+    var pos;
+    if(window.screen.availWidth<1200){
+        pos = window.screen.availWidth/2;
+    } else {
+        pos = 600;
+    }
+player = this.physics.add.sprite(pos, 200, 'dude');
+
+//  Player physics properties. Give the little guy a slight bounce.
+player.setBounce(0.2);
+player.setCollideWorldBounds(true);
+
+//  Our player animations, turning, walking left and walking right.
+this.anims.create({
+key: 'left',
+frames: this.anims.generateFrameNumbers('dude', { start: 0, end: 3 }),
+frameRate: 10,
+repeat: -1
+});
+
+this.anims.create({
+key: 'turn',
+frames: [ { key: 'dude', frame: 4 } ],
+frameRate: 20
+});
+
+this.anims.create({
+key: 'right',
+frames: this.anims.generateFrameNumbers('dude', { start: 5, end: 8 }),
+frameRate: 10,
+repeat: -1
+});
+
+//  Input Events
+cursors = this.input.keyboard.createCursorKeys();
+
+//  Some stars to collect, 12 in total, evenly spaced 70 pixels apart along the x axis
+stars = this.physics.add.group({
+key: 'star',
+repeat: 0,
+setXY: { x: 800, y: 0, stepX: 70 }
+});
+
+stars.children.iterate(function (child) {
+
+//  Give each star a slightly different bounce
+child.setBounceY(Phaser.Math.FloatBetween(0.1, 0.2));
+
+});
+
+//bombs = this.physics.add.group();
+
+//  The score
+//scoreText = this.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
+
+//  Collide the player and the stars with the platforms
+this.physics.add.collider(player, platforms);
+this.physics.add.collider(stars, platforms);
+//this.physics.add.collider(bombs, platforms);
+
+//  Checks to see if the player overlaps with any of the stars, if he does call the collectStar function
+this.physics.add.overlap(player, stars, collectStar, null, this);
+
+//this.physics.add.collider(player, bombs, hitBomb, null, this);
+}
+
+function update ()
+{
+if (gameOver)
+{
+    location.reload();
+    return;
+}
+
+if (cursors.left.isDown)
+{
+player.setVelocityX(-160);
+
+player.anims.play('left', true);
+}
+else if (cursors.right.isDown)
+{
+player.setVelocityX(160);
+
+player.anims.play('right', true);
+}
+else
+{
+player.setVelocityX(0);
+
+player.anims.play('turn');
+}
+
+if (cursors.up.isDown && player.body.touching.down)
+{
+player.setVelocityY(-330);
+}
+}
+
+function collectStar (player, star)
+{
+star.disableBody(true, true);
+window.location.href = '#projects';
+    location.reload();
+//  Add and update the score
+//score += 10;
+//scoreText.setText('Score: ' + score);
+
+if (stars.countActive(true) === 0)
+{
+//  A new batch of stars to collect
+stars.children.iterate(function (child) {
+
+child.enableBody(true, child.x, 0, true, true);
+
+});
+
+var x = (player.x < 400) ? Phaser.Math.Between(400, 800) : Phaser.Math.Between(0, 400);
+
+var bomb = bombs.create(x, 16, 'bomb');
+bomb.setBounce(1);
+bomb.setCollideWorldBounds(true);
+bomb.setVelocity(Phaser.Math.Between(-200, 200), 20);
+bomb.allowGravity = false;
+
+}
+}
+
+function hitBomb (player, bomb)
+{
+this.physics.pause();
+
+player.setTint(0xff0000);
+
+player.anims.play('turn');
+
+gameOver = true;
+}
+
+</script>
 
 <!-- Intro Section -->
 <section id="intro" class="intro-section">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-               <h1>Trevor $impkin</h1>
-                <p><a class="page-scroll" href="#about">About</a> / <a class="page-scroll" href="#projects">Portfolio</a> / <a class="page-scroll" href="#contact">Contact</a> </p>
+                <img src="/images/hat.png" width="150"/>
+                <h1>Trevor</h1>
+                <h1><span class="flashing-text">S</span>impkin</h1>
+                <div class="row">
+                    <div class="col-sm-2 offset-sm-5">
+                    <ul class="nav-list">
+                        <li><a class="page-scroll" href="#about">About</a></li>
+                        <li><a class="page-scroll" href="#projects">Portfolio</a></li>
+                        <li><a class="page-scroll" href="#contact">Contact</a></li>
+                    </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-1 offset-sm-4">
+                        <p>&copy;2019</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -52,20 +267,25 @@
 
 <!-- About Section -->
 <section id="about" class="about-section">
-    <div class="container">
+    <div class="container heading">
         <div class="row">
             <div class="col-lg-12">
-                <h1>About</h1>
+                <h1> </h1>
             </div>
         </div>
-        <div class="col-lg-6 about-photo">
-            <img class="img-responsive" src="/images/trevorabout.png" width="400"/>
-        </div>
-        <div class="col-lg-6 well about-description">
-            <p>Thanks for visiting my site! I am originally from the Seattle area, currently living in Brooklyn, NY. I have a diverse academic background that includes a BS in Physics, a ton of computer science coursework, and have recently obtained my MS in Information Systems from Brooklyn College.</p>
-            <p>I love building things and solving problems.  My interests are programming, web development, systems analysis and design, and rock climbing.</p>
-            <p>Some personal, academic, and professional projects can be found below! Also, feel free to contact me using the form at the bottom of the page.</p>
-            <p>-Trevor Simpkin</p>
+    </div>
+    <!--<div class="container banner">
+        <img class="img-fluid" src="/images/title_littletrevor.png"/>
+    </div>-->
+    <div id="game">
+    </div>
+    <div class="container text">
+        <div class="row">
+            <div class="col-lg-12 about-description">
+                <p>Hello, I am Trevor Simpkin a Brooklyn Based Web Developer.</p>
+                <p>(<i class="material-icons" style="font-size:36px">arrow_back</i>, <i class="material-icons" style="font-size:36px">arrow_upward</i>, <i class="material-icons" style="font-size:36px">arrow_forward</i> )</p>
+
+            </div>
         </div>
     </div>
 </section>
@@ -73,92 +293,94 @@
 <!-- Portfolio Grid Section -->
 <section id="projects" class="services-section">
     <div class="container-fluid">
+
         <div class="row">
-            <div class="col-lg-12">
-                <h1>Portfolio</h1>
+            <div class="col-md-4 col-sm-6 portfolio-item">
+                <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+                    <div class="portfolio-hover">
+                        <div class="portfolio-hover-content">
+                            <i class="fas fa-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img class="img-fluid" src="/images/thumbnail1.png" alt="">
+                </a>
+                <div class="portfolio-caption">
+                    <h4>Noise Level Monitoring Site</h4>
+                    <p class="text-muted">Data Presentation</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 portfolio-item">
+                <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
+                    <div class="portfolio-hover">
+                        <div class="portfolio-hover-content">
+                            <i class="fas fa-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img class="img-fluid" src="/images/thumbnail1.png" alt="">
+                </a>
+                <div class="portfolio-caption">
+                    <h4>Company Web Page</h4>
+                    <p class="text-muted">Web Development</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 portfolio-item">
+                <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
+                    <div class="portfolio-hover">
+                        <div class="portfolio-hover-content">
+                            <i class="fas fa-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img class="img-fluid" src="img/portfolio/03-thumbnail.jpg" alt="">
+                </a>
+                <div class="portfolio-caption">
+                    <h4>Universal Noise Monitoring System</h4>
+                    <p class="text-muted">Product / System Development</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 portfolio-item">
+                <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
+                    <div class="portfolio-hover">
+                        <div class="portfolio-hover-content">
+                            <i class="fas fa-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img class="img-fluid" src="/images/game_boi.png" alt="">
+                </a>
+                <div class="portfolio-caption">
+                    <h4>Game Boy 3B+</h4>
+                    <p class="text-muted">Passion Project</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 portfolio-item">
+                <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
+                    <div class="portfolio-hover">
+                        <div class="portfolio-hover-content">
+                            <i class="fas fa-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img class="img-fluid" src="img/portfolio/05-thumbnail.jpg" alt="">
+                </a>
+                <div class="portfolio-caption">
+                    <h4>Github</h4>
+                    <p class="text-muted">See My Code</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 portfolio-item">
+                <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
+                    <div class="portfolio-hover">
+                        <div class="portfolio-hover-content">
+                            <i class="fas fa-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img class="img-fluid" src="img/portfolio/06-thumbnail.jpg" alt="">
+                </a>
+                <div class="portfolio-caption">
+                    <h4>City Rocks</h4>
+                    <p class="text-muted">Volunteering</p>
+                </div>
             </div>
         </div>
-        <div class="container background well">
-        <!-- Projects Row -->
-        <div class="row">
-            <div class="col-md-3 col-sm-9 portfolio-item">
-                <div class="thumbnail">
-                    <a href="/projects/gameoflife">
-                        <img class="img-responsive" src="/images/thumbnail1.png" alt="">
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-9 portfolio-item">
-                <div class="thumbnail">
-                    <a href="/projects/nqueens">
-                        <img class="img-responsive" src="/images/thumbnail2.png" alt="">
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-9 portfolio-item">
-                <div class="thumbnail">
-                    <a href="/projects/dwa">
-                        <img class="img-responsive" src="/images/thumbnail3.png" alt="">
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-9 portfolio-item">
-                <div class="thumbnail">
-                    <a href="/projects/pca">
-                        <img class="img-responsive" src="/images/thumbnail7.png" alt="">
-                    </a>
-                </div>
-            </div>
 
-        </div>
-        <!-- /.row -->
-
-        <!-- Projects Row -->
-        <div class="row">
-            <div class="col-md-3 col-sm-9 portfolio-item">
-                <div class="thumbnail">
-                    <a href="/projects/ugresearch">
-                        <img class="img-responsive" src="/images/thumbnail4.png" alt="">
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-9 portfolio-item">
-                <div class="thumbnail">
-                    <a href="/projects/kwd">
-                        <img class="img-responsive" src="/images/thumbnail5.png" alt="">
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-9 portfolio-item">
-                <div class="thumbnail">
-                    <a href="/projects/cityrocks">
-                        <img class="img-responsive" src="/images/thumbnail6.png" alt="">
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-md-3 col-sm-9 portfolio-item">
-                <div class="thumbnail">
-                    <a href="https://github.com/trevorsimpkin">
-                        <img class="img-responsive" src="/images/thumbnail10.png" alt="">
-                    </a>
-                </div>
-            </div>
-        </div>
-        <!-- /.row -->
-
-        <!-- Projects Row -->
-        <div class="row">
-            <div class="col-md-3 col-sm-9 portfolio-item">
-                <div class="thumbnail">
-                    <a href="https://www.linkedin.com/in/trevor-simpkin-a284aa64/">
-                        <img class="img-responsive" src="/images/thumbnail8.png" alt="">
-                    </a>
-                </div>
-            </div>
-
-            </div>
-            </div>
     </div>
 
 </section>
@@ -179,76 +401,68 @@
                 <li>{{ $error }}</li>
             @endforeach
         </ul>
+
         <form method='POST' action='#contact' class="well form-horizontal" id="contact_form">
             {!! csrf_field() !!}
             <fieldset>
-
-                <div class="form-group">
-                    <label class="col-md-4 control-label">First Name</label>
-                    <div class="col-md-4 inputGroupContainer">
-                        <div class="input-group">
-                            <input  name="first_name" id="first_name" placeholder="First Name" class="form-control"  type="text">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="first_name">First Name</label>
+                            <input id="first_name" type="text" name="first_name" class="form-control" placeholder="First Name" required="required">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="last_name">Last Name</label>
+                            <input id="last_name" type="text" name="last_name" class="form-control" placeholder="Last Name" required="required">
                         </div>
                     </div>
                 </div>
-
-
-                <div class="form-group">
-                    <label class="col-md-4 control-label" >Last Name</label>
-                    <div class="col-md-4 inputGroupContainer">
-                        <div class="input-group">
-                             <input name="last_name" id ="last_name" placeholder="Last Name" class="form-control"  type="text">
-                         </div>
-                     </div>
-                 </div>
-
-                 <!-- Text input-->
-                <div class="form-group">
-                    <label class="col-md-4 control-label">E-Mail</label>
-                    <div class="col-md-4 inputGroupContainer">
-                        <div class="input-group">
-                                <input name="email" id="email" placeholder="E-Mail Address" class="form-control"  type="text">
-                            </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input id="email" type="email" name="email" class="form-control" placeholder="E-mail Address" required="required">
                         </div>
                     </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input id="phone" type="phone" name="phone" class="form-control" placeholder="(###)###-####" required="required">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
 
-
-                    <!-- Text input-->
-
-                <div class="form-group">
-                    <label class="col-md-4 control-label">Phone #</label>
-                    <div class="col-md-4 inputGroupContainer">
-                        <div class="input-group">
-                            <!-- Text input
-                               <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span> -->
-                               <input name="phone" id="phone" placeholder="(555)555-5555" class="form-control" type="text">
-                           </div>
-                       </div>
-                   </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="form_message">Message</label>
+                            <textarea id="message" name="message" class="form-control" placeholder="Message" rows="4" required="required" dat></textarea>
+                        </div>
+                    </div>
+                </div>
+                    <div class="col-md-6">
+                        <input type="submit" class="btn btn-success btn-send" value="Send message">
+                    </div>
 
 
                    <!-- Text area -->
 
-                <div class="form-group">
-                    <label class="col-md-4 control-label">Message</label>
-                    <div class="col-md-4 inputGroupContainer">
-                        <div class="input-group">
-                              <textarea class="form-control" name="message" id="message" placeholder="Message"></textarea>
-                          </div>
-                      </div>
-                  </div>
 
-                <div class="form-group">
-                    <label class="col-md-4 control-label"></label>
-                    <div class="col-md-4">
-                        <button type="submit" class="btn btn-info" >Send <span class="glyphicon glyphicon-send"></span></button>
-                     </div>
-                 </div>
 
              </fieldset>
          </form>
+
      </div>
-     </div><!-- /.container -->
+     <!-- /.container -->
+
+
 </section>
 
 <!-- jQuery -->
