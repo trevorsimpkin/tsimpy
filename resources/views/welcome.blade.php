@@ -304,7 +304,7 @@ gameOver = true;
                     <img class="img-fluid" src="/images/graph_screenshot.png" alt="">
                 </a>
                 <div class="portfolio-caption">
-                    <h4>Project Management / Data App</h4>
+                    <h4>Project Management App</h4>
                     <p class="text-muted">Web Development / Data Presentation</p>
                 </div>
             </div>
@@ -351,15 +351,7 @@ gameOver = true;
                             <p>
                                 My current company 
                             </p>
-                            <p>
-                                There are countless tutorials online for building a Game Boy Zero (an old Nintendo Game Boy, stripped of much of its insides and replaced with a Raspberry Pi Zero running RetroPie OS). I became obsessed with building my own, but wanted it to have the larger, more powerful, Raspberry Pi 3B+ so I could play more processor demanding games from systems like N64 or Playstation.
-                            </p>
-                            <p>
-                                I was able to Dremel out unnecessary bulk inside the original Game Boy case. I also created new holes for additional 'X' and 'Y' buttons on the front and added 'L' and 'R' triggers with mechanical switches on the back of the case. The buttons were hooked up to a custom PCB that connected to the GPIO pins on the Pi 3B+. I added a rechargeable LiPo Battery with an on/off switch. I modified a composite car back-up camera screen to run off the Pi's 5V power output and soldered the video input to the Pi's composite output.
-                            </p>
-                            <p>
-                                There are some flaws in my design and I plan on returning to it soon, but as of now I can get a few hours of mobile game play of anything from NES to Dreamcast games.
-                            </p>
+
                         </div>
 
                         <!-- Modal footer -->
