@@ -101,7 +101,7 @@ platforms.create(600, 345, 'ground').setScale(3).refreshBody();
     if(window.screen.availWidth<1200){
         pos = window.screen.availWidth/2;
     } else {
-        pos = 600;
+        pos = 300;
     }
 player = this.physics.add.sprite(pos, 200, 'dude');
 
@@ -137,7 +137,7 @@ cursors = this.input.keyboard.createCursorKeys();
 stars = this.physics.add.group({
 key: 'star',
 repeat: 0,
-setXY: { x: 800, y: 0, stepX: 70 }
+setXY: { x: 900, y: 0, stepX: 70 }
 });
 
 stars.children.iterate(function (child) {
@@ -251,7 +251,6 @@ gameOver = true;
                     <ul class="nav-list">
                         <li><a class="page-scroll" href="#about">About</a></li>
                         <li><a class="page-scroll" href="#projects">Portfolio</a></li>
-                        <li><a class="page-scroll" href="#contact">Contact</a></li>
                     </ul>
                     </div>
                 </div>
@@ -324,21 +323,55 @@ gameOver = true;
                 </div>
             </div>
             <div class="col-md-4 col-sm-6 portfolio-item">
-                <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
+                <a class="portfolio-link" data-toggle="modal" href="#iotModal">
                     <div class="portfolio-hover">
                         <div class="portfolio-hover-content">
                             <i class="fas fa-plus fa-3x"></i>
                         </div>
                     </div>
-                    <img class="img-fluid" src="img/portfolio/03-thumbnail.jpg" alt="">
+                    <img class="img-fluid" src="images/helix_monitoring.png" alt="">
                 </a>
                 <div class="portfolio-caption">
-                    <h4>Universal Noise Monitoring System</h4>
+                    <h4>IoT Monitoring System</h4>
                     <p class="text-muted">Product / System Development</p>
                 </div>
             </div>
+            <div class="modal" id="iotModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 class="modal-title">IoT Environmental Monitoring System</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <p>
+                                My current company 
+                            </p>
+                            <p>
+                                There are countless tutorials online for building a Game Boy Zero (an old Nintendo Game Boy, stripped of much of its insides and replaced with a Raspberry Pi Zero running RetroPie OS). I became obsessed with building my own, but wanted it to have the larger, more powerful, Raspberry Pi 3B+ so I could play more processor demanding games from systems like N64 or Playstation.
+                            </p>
+                            <p>
+                                I was able to Dremel out unnecessary bulk inside the original Game Boy case. I also created new holes for additional 'X' and 'Y' buttons on the front and added 'L' and 'R' triggers with mechanical switches on the back of the case. The buttons were hooked up to a custom PCB that connected to the GPIO pins on the Pi 3B+. I added a rechargeable LiPo Battery with an on/off switch. I modified a composite car back-up camera screen to run off the Pi's 5V power output and soldered the video input to the Pi's composite output.
+                            </p>
+                            <p>
+                                There are some flaws in my design and I plan on returning to it soon, but as of now I can get a few hours of mobile game play of anything from NES to Dreamcast games.
+                            </p>
+                        </div>
+
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
             <div class="col-md-4 col-sm-6 portfolio-item">
-                <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
+                <a href="/#" class="portfolio-link" data-toggle="modal" data-target="#gameBoyModal">
                     <div class="portfolio-hover">
                         <div class="portfolio-hover-content">
                             <i class="fas fa-plus fa-3x"></i>
@@ -351,14 +384,48 @@ gameOver = true;
                     <p class="text-muted">Passion Project</p>
                 </div>
             </div>
+            <div class="modal" id="gameBoyModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 class="modal-title">Game Boy 3B+</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <p>
+                            A love for old video games inspired me to start building retro gaming machines with Raspberry Pis. Using RetroPie image build on top of Raspian, it is incredibly easy to get a very functional emulator up and running quickly. After building a console system I began exploring mobile possibilities.
+                            </p>
+                            <p>
+                                There are countless tutorials online for building a Game Boy Zero (an old Nintendo Game Boy, stripped of much of its insides and replaced with a Raspberry Pi Zero running RetroPie OS). I became obsessed with building my own, but wanted it to have the larger, more powerful, Raspberry Pi 3B+ so I could play more processor demanding games from systems like N64 or Playstation.
+                            </p>
+                            <p>
+                                I was able to Dremel out unnecessary bulk inside the original Game Boy case. I also created new holes for additional 'X' and 'Y' buttons on the front and added 'L' and 'R' triggers with mechanical switches on the back of the case. The buttons were hooked up to a custom PCB that connected to the GPIO pins on the Pi 3B+. I added a rechargeable LiPo Battery with an on/off switch. I modified a composite car back-up camera screen to run off the Pi's 5V power output and soldered the video input to the Pi's composite output.
+                            </p>
+                            <p>
+                                There are some flaws in my design and I plan on returning to it soon, but as of now I can get a few hours of mobile game play of anything from NES to Dreamcast games.
+                            </p>
+                        </div>
+
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
             <div class="col-md-4 col-sm-6 portfolio-item">
-                <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
+                <a class="portfolio-link" href="https://github.com/trevorsimpkin?tab=repositories">
                     <div class="portfolio-hover">
                         <div class="portfolio-hover-content">
                             <i class="fas fa-plus fa-3x"></i>
                         </div>
                     </div>
-                    <img class="img-fluid" src="img/portfolio/05-thumbnail.jpg" alt="">
+                    <img class="img-fluid" src="/images/github_logo.png" alt="">
                 </a>
                 <div class="portfolio-caption">
                     <h4>Github</h4>
@@ -366,104 +433,52 @@ gameOver = true;
                 </div>
             </div>
             <div class="col-md-4 col-sm-6 portfolio-item">
-                <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
+                <a class="portfolio-link" data-toggle="modal" href="#volunteerModal">
                     <div class="portfolio-hover">
                         <div class="portfolio-hover-content">
                             <i class="fas fa-plus fa-3x"></i>
                         </div>
                     </div>
-                    <img class="img-fluid" src="img/portfolio/06-thumbnail.jpg" alt="">
+                    <img class="img-fluid" src="/images/bkbf.png" alt="">
                 </a>
                 <div class="portfolio-caption">
                     <h4>City Rocks</h4>
                     <p class="text-muted">Volunteering</p>
                 </div>
             </div>
+            <div class="modal" id="volunteerModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 class="modal-title">Brooklyn Boulders Foundation - City Rocks</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <p>
+                                During my free time, I mentor a local high school student through a program called City Rocks. The program uses Rock Climbing as a catalyst to foster relationships and empower students to develop self-confidence, creativity, and the ability to succeed.
+                            </p>
+                            <p>To learn more about the program or to donate please visit the <a href="https://bkbf.org">Brooklyn Boulders Foundation website</a>.</p>
+                        </div>
+
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
         </div>
 
     </div>
 
 </section>
 
-<!-- Contact Section -->
-<section id="contact" class="contact-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <h1>Contact</h1>
-            </div>
-        </div>
-        @if(Session::get('message') != null)
-            <div class='message'><i class="glyphicon glyphicon-thumbs-up"></i>{{ Session::get('message') }}</div>
-        @endif
-        <ul>
-            @foreach($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-
-        <form method='POST' action='#contact' class="well form-horizontal" id="contact_form">
-            {!! csrf_field() !!}
-            <fieldset>
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="form-group">
-                            <label for="first_name">First Name</label>
-                            <input id="first_name" type="text" name="first_name" class="form-control" placeholder="First Name" required="required">
-                            <div class="help-block with-errors"></div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="form-group">
-                            <label for="last_name">Last Name</label>
-                            <input id="last_name" type="text" name="last_name" class="form-control" placeholder="Last Name" required="required">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="form-group">
-                            <label for="email">E-mail</label>
-                            <input id="email" type="email" name="email" class="form-control" placeholder="E-mail Address" required="required">
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input id="phone" type="phone" name="phone" class="form-control" placeholder="(###)###-####" required="required">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-3">
-
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="form_message">Message</label>
-                            <textarea id="message" name="message" class="form-control" placeholder="Message" rows="4" required="required" dat></textarea>
-                        </div>
-                    </div>
-                </div>
-                    <div class="col-md-6">
-                        <input type="submit" class="btn btn-success btn-send" value="Send message">
-                    </div>
-
-
-                   <!-- Text area -->
-
-
-
-             </fieldset>
-         </form>
-
-     </div>
-     <!-- /.container -->
-
-
-</section>
 
 <!-- jQuery -->
 <script src="bootstrap/js/jquery.js"></script>

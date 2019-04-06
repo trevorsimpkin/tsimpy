@@ -33,6 +33,10 @@ body {
 a.page-scroll, p{
     color: white;
 }
+.modal-body >p {
+    color: black;
+    text-align: justify;
+}
 a:hover {
     text-decoration: none;
 }
@@ -72,6 +76,10 @@ li:hover {
     text-align: center;
     font-size: 18px;
 }
+.modal-backdrop
+{
+    opacity:0.95 !important;
+}
 .banner {
     max-width: 100%;
 }
@@ -79,10 +87,9 @@ li:hover {
     max-width:1250px;
 }
 .services-section {
-    color: #ffc0cb;
-}
-.services-section h1 {
-    margin-bottom: 50px;
+    color: black;
+    height: auto;
+
 }
 .services-section .background {
     background: #eee;
@@ -90,7 +97,7 @@ li:hover {
     padding: 20px;
 }
 .portfolio-item {
-    margin-bottom: 25px;
+    height: 50vh;
 }
 textarea.form-control{
     height: 200px;
